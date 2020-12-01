@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import styles from './CSS/wedding.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class NavBar extends Component {
+	
+	render() {
+		
+		return (
+			<ul className={styles.navigationBarItems}>
+				<li>Save the Date</li>
+				<li>Our Story</li>
+				<li>Location</li>
+				<li>RSVP</li>
+				<li>Donate</li>
+			</ul>
+		);
+	}
 }
 
-export default App;
+export class HeroBanner extends Component {
+	
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div>
+				<img src={this.props.image} alt="Hero"/>
+				<h2>{this.props.title}</h2>
+			</div>
+		);
+	}
+}
+
+export class Page extends Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+		render() {
+			return (
+				<div>
+					<NavBar/>
+					<HeroBanner image="images/couple.jpg" title="The Wedding of Justin Thomas Oakes and Madeline Elizabeth Hudson"/>
+				</div>
+			);
+	}
+}

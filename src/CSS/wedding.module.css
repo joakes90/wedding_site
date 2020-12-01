@@ -1,0 +1,20 @@
+.navigationBarItems {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 1.5em;
+	color: black;
+	font-weight: 700;
+	text-decoration: none;
+	max-width: 800px;
+	margin: auto;
+/* 	font-family: Zapfino; */
+	font-family: Didot;
+	/* Debugging styling */
+	background-color: pink;
+}
+
+.navigationBarItems li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}

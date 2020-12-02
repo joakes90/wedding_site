@@ -19,10 +19,6 @@ export default class Map extends Component {
 
 	routeToMaps = () => window.location="https://www.google.com/maps/dir//Forest+Park,+OK/@35.4999509,-97.4544873,15.38z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87b217f8f75e2757:0x9d503000d3ebf255!2m2!1d-97.4461485!2d35.5042269";
 	
-	componentDidMount() {
-		console.log("I mounted");
-	}
-	
 	render() {
 		return (
 			<a id="map">

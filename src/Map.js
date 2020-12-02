@@ -15,14 +15,22 @@ export default class Map extends Component {
 		  
 	render() {
 		return (
-			<div className={styles.container}>
-			<h3 className={styles.title}>Blueberry Hills</h3>
-				<GoogleMapReact
-				  bootstrapURLKeys={{ key: "API Key"}}
-				  defaultCenter={location.center}
-				  defaultZoom={location.zoom}>
-				</GoogleMapReact>
-			</div>
+			<a id="map">
+				<div className={styles.container} id="map">
+				<h3 className={styles.title}>Blueberry Hills</h3>
+					<GoogleMapReact
+					  bootstrapURLKeys={{ key: "API Key"}}
+					  defaultCenter={location.center}
+					  defaultZoom={location.zoom}>
+					  
+					  	<img src="images/pin.png"
+					  		lat={location.center.lat}
+            				lng={location.center.lng}
+           					 text="Venue"
+					  	/>
+					</GoogleMapReact>
+				</div>
+			</a>
 		);
 	}
 }

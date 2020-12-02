@@ -9,7 +9,7 @@ export class NavBar extends Component {
 		return (
 			<ul className={styles.navigationBarItems}>
 				<li>Save the Date</li>
-				<li>Location</li>
+				<a href="#map"><li>Location</li></a>
 				<li>Photos</li>
 				<li>Live Stream</li>
 				<li>RSVP</li>
@@ -27,7 +27,7 @@ export class HeroBanner extends Component {
 
 	render() {
 		return (
-			<div className={styles.heroBanner}>
+			<div className={styles.heroBanner} id="saveDate">
 				<img src={this.props.image} alt="Hero"/>
 				<h2>
 					{this.props.event}

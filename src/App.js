@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './CSS/wedding.module.css';
+import Map from './Map.js';
 
 export class NavBar extends Component {
 	
@@ -8,8 +9,9 @@ export class NavBar extends Component {
 		return (
 			<ul className={styles.navigationBarItems}>
 				<li>Save the Date</li>
-				<li>Our Story</li>
 				<li>Location</li>
+				<li>Photos</li>
+				<li>Live Stream</li>
 				<li>RSVP</li>
 				<li>Donate</li>
 			</ul>
@@ -25,9 +27,13 @@ export class HeroBanner extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className={styles.heroBanner}>
 				<img src={this.props.image} alt="Hero"/>
-				<h2>{this.props.title}</h2>
+				<h2>
+					{this.props.event}
+					<br/>
+					{this.props.date}
+				</h2>
 			</div>
 		);
 	}
@@ -43,7 +49,8 @@ export class Page extends Component {
 			return (
 				<div>
 					<NavBar/>
-					<HeroBanner image="images/couple.jpg" title="The Wedding of Justin Thomas Oakes and Madeline Elizabeth Hudson"/>
+					<HeroBanner image="images/couple.jpg" title="Save the date." date="Sept 5th 2021" event="The wedding of Justin Thomas Oakes and Madeline Elizabeth Hudson"/>
+					<Map/>
 				</div>
 			);
 	}

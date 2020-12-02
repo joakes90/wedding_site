@@ -1,0 +1,16 @@
+/* Map style */
+
+.container {
+	margin: auto;
+	max-width: 1200px;
+	width: 600px;
+	height: 450px;
+}
+
+.title {
+	margin: auto;
+	font-family: Zapfino;
+	text-align: center;
+	padding-top: 1.0em;
+	font-size: 2.7vw;
+}

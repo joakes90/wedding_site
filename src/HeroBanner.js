@@ -9,14 +9,16 @@ export default class HeroBanner extends Component {
 
 	render() {
 		return (
-			<div className={styles.heroBanner} id="saveDate">
-				<img src={this.props.image} alt="Hero"/>
-				<h2>
-					{this.props.event}
-					<br/>
-					{this.props.date}
-				</h2>
-			</div>
+			<a id="hero">
+				<div className={styles.heroBanner} id="saveDate">
+					<img src={this.props.image} alt="Hero"/>
+					<h2>
+						{this.props.event}
+						<br/>
+						{this.props.date}
+					</h2>
+				</div>
+			</a>
 		);
 	}
 }

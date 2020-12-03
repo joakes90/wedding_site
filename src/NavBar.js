@@ -7,7 +7,7 @@ export default class NavBar extends Component {
 		
 		return (
 			<ul className={styles.navigationBarItems}>
-				<li>Save the Date</li>
+				<a href="#hero"><li>Save the Date</li></a>
 				<a href="#map"><li>Location</li></a>
 				<li>Photos</li>
 				<li>Live Stream</li>

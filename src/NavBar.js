@@ -9,8 +9,8 @@ export default class NavBar extends Component {
 			<ul className={styles.navigationBarItems}>
 				<a href="#hero"><li>Save the Date</li></a>
 				<a href="#map"><li>Location</li></a>
-				<li>Photos</li>
-				<li>Live Stream</li>
+				<a href="#photos"><li>Photos</li></a>
+				<a href="#stream"><li>Live Stream</li></a>
 				<li>RSVP</li>
 				<li>Donate</li>
 			</ul>

@@ -3,7 +3,7 @@ import styles from './CSS/wedding.module.css';
 import Map from './Map.js';
 import NavBar from './NavBar.js';
 import HeroBanner from './HeroBanner.js';
-
+import PlaceHolder from './PlaceHolder.js';
 
 
 export class Page extends Component {
@@ -16,8 +16,10 @@ export class Page extends Component {
 			return (
 				<div>
 					<NavBar/>
-					<HeroBanner image="images/couple.jpg" title="Save the date." date="Sept 5th 2021" event="The wedding of Justin Thomas Oakes and Madeline Elizabeth Hudson"/>
-					<Map/>
+					<a id="hero"><HeroBanner image="images/couple.jpg" title="Save the date." date="Sept 5th 2021" event="The wedding of Justin Thomas Oakes and Madeline Elizabeth Hudson"/></a>
+					<a id="map"><Map/></a>
+					<a id="photos"><PlaceHolder title="Photos" message="Check back here after the big day for pics of the event"/></a>
+					<a id="stream"><PlaceHolder title="Live Stream" message="Come back here the day of the wedding to watch live"/></a>
 				</div>
 			);
 	}

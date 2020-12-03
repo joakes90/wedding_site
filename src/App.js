@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import styles from './CSS/wedding.module.css';
 import Map from './Map.js';
 import NavBar from './NavBar.js';
 import HeroBanner from './HeroBanner.js';
@@ -7,11 +6,6 @@ import PlaceHolder from './PlaceHolder.js';
 
 
 export class Page extends Component {
-
-	constructor(props) {
-		super(props);
-	}
-
 		render() {
 			return (
 				<div>

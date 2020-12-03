@@ -23,7 +23,7 @@ export default class Map extends Component {
 		return (
 			<div className={styles.container}>
 				<h3 className={styles.title}>Blueberry Hills</h3>
-				<p className={styles.directions}>Double click marker for directions</p>
+				<p className={styles.directions}>Click marker for directions</p>
 				<div className={styles.mapContainer}>
 					<GoogleMapReact
 					  bootstrapURLKeys={{ key: "API Key"}}
@@ -35,7 +35,8 @@ export default class Map extends Component {
 							lat={location.center.lat}
 							lng={location.center.lng}
 							 text="Venue"
-							 onDoubleClick={this.routeToMaps}
+							 onClick={this.routeToMaps}
+							 alt="Map marker"
 						/>
 					</GoogleMapReact>
 				</div>

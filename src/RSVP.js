@@ -52,7 +52,6 @@ export default class RSVP extends Component {
 	}
 
 	saveGuest() {
-		console.log(this.state);
 		let data = {
 			name: this.state.name,
 			message: this.state.message,
@@ -79,6 +78,7 @@ export default class RSVP extends Component {
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>
+					<br/>
 					<input
 					 	type="text"
 					 	id="name"
@@ -91,7 +91,8 @@ export default class RSVP extends Component {
 					 	value={this.state.name}
 					/>
 					<br/>
-					<label for="email">Email where you can be reached if needed (optional) </label>
+					<label for="email">Email where you can be reached (optional) </label>
+					<br/>
 					<input
 						type="email"
 						id="email"
@@ -100,7 +101,7 @@ export default class RSVP extends Component {
 						onChange={this.onChangeEmail}
 						value={this.state.email}
 					/>
-					<br/>
+					<br/><br/>
 					<label for="attending"> Will you be attending? </label>
 					<input
 						type="checkbox"
@@ -118,9 +119,8 @@ export default class RSVP extends Component {
 						onChange={this.onChangePlusOne}
 						value={this.state.hasPlusOne}
 					/>
-					<br/>
-					<label for="message" id="message"> Any special requests to messages to the brid and groom? </label>
-					<br/>
+					<br/><br/>
+					<label for="message" id="message"> Special requests or messages to the brid and groom? </label>
 					<textarea
 						id="message"
 						name="message"
@@ -129,7 +129,6 @@ export default class RSVP extends Component {
 						onChange={this.onChangeMessage}
 						value={this.state.message}
 					/>
-					<br/>
 					<input 
 						type="button"
 						value="Submit"

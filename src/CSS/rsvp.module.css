@@ -2,7 +2,7 @@
 	padding-top: 150px;
 	margin: auto;
 	width: 80%;
-	max-width: 1100px;
+	max-width: 600px;
 }
 
 .title {
@@ -14,8 +14,36 @@
 
 form {
 	background-color: pink;
-	padding: 16px;
+	padding: 24px;
 	border-radius: 15px;
 	font-family: Didot;
 	font-weight: bold;
+}
+
+textarea {
+	resize: none;
+	width: 90%;
+	height: 100px;
+}
+
+input {
+	float: right;
+}
+
+input[type=text] {
+	width: 33%;
+}
+
+input[type=email] {
+	width: 33%;
+}
+
+@media only screen and (max-width: 500px) {
+	input[type=text] {
+	width: 75%;
+	}
+
+	input[type=email] {
+		width: 75%;
+	}
 }

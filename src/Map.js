@@ -26,7 +26,7 @@ export default class Map extends Component {
 				<p className={styles.directions}>Click marker for directions</p>
 				<div className={styles.mapContainer}>
 					<GoogleMapReact
-					  bootstrapURLKeys={{ key: "API Key"}}
+					  bootstrapURLKeys={{ key: process.env.REACT_APP_GAPI}}
 					  defaultCenter={location.center}
 					  defaultZoom={location.zoom}
 					  on>

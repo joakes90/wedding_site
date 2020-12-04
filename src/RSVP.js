@@ -9,8 +9,9 @@ export default class RSVP extends Component {
 		this.onChangeName = this.onChangeName.bind(this);
 		this.onChangeAttending = this.onChangeAttending.bind(this);
 		this.onChangePlusOne = this.onChangePlusOne.bind(this);
-		this.onMessageChange = this.onMessageChange.bind(this);
+		this.onChangeMessage = this.onChangeMessage.bind(this);
 		this.onChangeEmail = this.onChangeEmail.bind(this);
+		this.saveGuest = this.saveGuest.bind(this);
 
 		this.state = {
 			name: "",
@@ -18,7 +19,6 @@ export default class RSVP extends Component {
 			email: "",
 			isAttending: false,
 			hasPlusOne: false,
-			dateSubmitted: Date()
 		};
 	}
 	
@@ -35,17 +35,17 @@ export default class RSVP extends Component {
 	}
 	onChangeAttending(event) {
 		this.setState({
-			isAttending: event.target.value
+			isAttending: event.target.checked
 		});
 	}
 	
 	onChangePlusOne(event) {
 		this.setState({
-			hasPlusOne: event.target.value
+			hasPlusOne: event.target.checked
 		});
 	}
 	
-	onMessageChange(event) {
+	onChangeMessage(event) {
 		this.setState({
 			message: event.target.value
 		});
@@ -53,6 +53,24 @@ export default class RSVP extends Component {
 
 	saveGuest() {
 		console.log(this.state);
+		let data = {
+			name: this.state.name,
+			message: this.state.message,
+			email: this.state.email,
+			attending: this.state.isAttending,
+			plusOne: this.state.hasPlusOne,
+			submittedDate: new Date()
+		};
+		
+		RSVPDataService.create(data)
+		.then(() => {
+			console.log("New item created");
+			// TODO: Show a toast for successful submission
+		})
+		.catch((e) => {
+			console.log(e);
+			// TODO: Show alert with error
+		});
 	}
 	
 	render() {
@@ -61,22 +79,62 @@ export default class RSVP extends Component {
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>
-					<input type="text" id="name" name="name" requiered minlenght="3" maxlength="30" size="10" placeholder="Name"/>
+					<input
+					 	type="text"
+					 	id="name"
+					 	name="name"
+					 	requiered
+					 	minlenght="3"
+					 	maxlength="30"
+					 	placeholder="Name"
+					 	onChange={this.onChangeName}
+					 	value={this.state.name}
+					/>
 					<br/>
 					<label for="email">Email where you can be reached if needed (optional) </label>
-					<input type="email" id="email" name="email" placeholder="johndoe@example.com"/>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="johndoe@example.com"
+						onChange={this.onChangeEmail}
+						value={this.state.email}
+					/>
 					<br/>
 					<label for="attending"> Will you be attending? </label>
-					<input type="checkbox" id="attending" name="attending"/>
+					<input
+						type="checkbox"
+						 id="attending"
+						 name="attending"
+						 onChange={this.onChangeAttending}
+						 value={this.state.isAttending}
+					/>
 					<br/>
 					<label for="plusone"> Will you need a plus one? </label>
-					<input type="checkbox" id="onemore" name="onemore"/>
+					<input
+						type="checkbox"
+						id="onemore"
+						name="onemore"
+						onChange={this.onChangePlusOne}
+						value={this.state.hasPlusOne}
+					/>
 					<br/>
 					<label for="message" id="message"> Any special requests to messages to the brid and groom? </label>
 					<br/>
-					<textarea id="message" name="message" maxlength="280"/>
+					<textarea
+						id="message"
+						name="message"
+						maxlength="280"
+						placeholder="Enter a tweet length comment here (optional)"
+						onChange={this.onChangeMessage}
+						value={this.state.message}
+					/>
 					<br/>
-					<input type="submit"/>
+					<input 
+						type="button"
+						value="Submit"
+						onClick={this.saveGuest}
+					/>
 				</form>
 			</div>
 		);

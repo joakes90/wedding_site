@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 import RSVPDataService from "./Services/RSVPDataService.js";
 import styles from './CSS/rsvp.module.css';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
+
 export default class RSVP extends Component {
 
 	constructor(props) {
@@ -11,12 +16,14 @@ export default class RSVP extends Component {
 		this.onChangePlusOne = this.onChangePlusOne.bind(this);
 		this.onChangeMessage = this.onChangeMessage.bind(this);
 		this.onChangeEmail = this.onChangeEmail.bind(this);
+		this.onChangeSong = this.onChangeSong.bind(this);
 		this.saveGuest = this.saveGuest.bind(this);
 
 		this.state = {
 			name: "",
 			message: "",
 			email: "",
+			state: "",
 			isAttending: false,
 			hasPlusOne: false,
 		};
@@ -33,6 +40,13 @@ export default class RSVP extends Component {
 			email: event.target.value
 		});
 	}
+	
+	onChangeSong(event) {
+		this.setState({
+			song: event.target.value
+		});
+	}
+	
 	onChangeAttending(event) {
 		this.setState({
 			isAttending: event.target.checked
@@ -52,10 +66,15 @@ export default class RSVP extends Component {
 	}
 
 	saveGuest() {
+		if (this.state.name === "") {
+			toast.warning("Please give your name and indicate if you will be attending");
+			return;
+		}
 		let data = {
 			name: this.state.name,
 			message: this.state.message,
 			email: this.state.email,
+			song: this.state.song,
 			attending: this.state.isAttending,
 			plusOne: this.state.hasPlusOne,
 			submittedDate: new Date()
@@ -64,11 +83,11 @@ export default class RSVP extends Component {
 		RSVPDataService.create(data)
 		.then(() => {
 			console.log("New item created");
-			// TODO: Show a toast for successful submission
+			toast.success("Your RSVP has been received");
 		})
 		.catch((e) => {
 			console.log(e);
-			// TODO: Show alert with error
+			toast.warning("There was a problem receiving your RSVP");
 		});
 	}
 	
@@ -101,6 +120,17 @@ export default class RSVP extends Component {
 						onChange={this.onChangeEmail}
 						value={this.state.email}
 					/>
+					<br/>
+					<label for="song">Song requests </label>
+					<br/>
+					<input
+						type="text"
+						id="song"
+						name="song"
+						placeholder="Celebrate by Kool and the Gang"
+						onChange={this.onChangeSong}
+						value={this.state.song}
+					/>					
 					<br/><br/>
 					<label for="attending"> Will you be attending? </label>
 					<input

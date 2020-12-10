@@ -1,5 +1,5 @@
 # Use the official image as a parent image.
-FROM ubuntu:latest
+FROM node:10-alpine
 
 # Set the working directory.
 WORKDIR /usr/src/app

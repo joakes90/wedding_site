@@ -13,7 +13,7 @@ export default class RSVP extends Component {
 		
 		this.onChangeName = this.onChangeName.bind(this);
 		this.onChangeAttending = this.onChangeAttending.bind(this);
-		this.onChangePlusOne = this.onChangePlusOne.bind(this);
+		this.onChangePartySize = this.onChangePartySize.bind(this);
 		this.onChangeMessage = this.onChangeMessage.bind(this);
 		this.onChangeEmail = this.onChangeEmail.bind(this);
 		this.onChangeSong = this.onChangeSong.bind(this);
@@ -24,8 +24,9 @@ export default class RSVP extends Component {
 			message: "",
 			email: "",
 			state: "",
+			song: "",
 			isAttending: false,
-			hasPlusOne: false,
+			partySize: 0,
 		};
 	}
 	
@@ -48,14 +49,17 @@ export default class RSVP extends Component {
 	}
 	
 	onChangeAttending(event) {
+	let attending = event.target.checked;
+	let party = Number(document.getElementById('party').value);
 		this.setState({
-			isAttending: event.target.checked
+			isAttending: attending,
+			partySize: (attending ? party : 0)
 		});
 	}
 	
-	onChangePlusOne(event) {
+	onChangePartySize(event) {
 		this.setState({
-			hasPlusOne: event.target.checked
+			partySize: Number(event.target.value)
 		});
 	}
 	
@@ -76,7 +80,7 @@ export default class RSVP extends Component {
 			email: this.state.email,
 			song: this.state.song,
 			attending: this.state.isAttending,
-			plusOne: this.state.hasPlusOne,
+			partySize: this.state.partySize,
 			submittedDate: new Date()
 		};
 		
@@ -141,16 +145,23 @@ export default class RSVP extends Component {
 						 value={this.state.isAttending}
 					/>
 					<br/>
-					<label for="plusone"> Will you need a plus one? </label>
-					<input
-						type="checkbox"
-						id="onemore"
-						name="onemore"
-						onChange={this.onChangePlusOne}
-						value={this.state.hasPlusOne}
-					/>
+					<label for="party"> Number of people in your party? </label>
+					<select 
+						id="party"
+						name="party"
+						disabled={!this.state.isAttending}
+						onChange={this.onChangePartySize}
+						value={this.state.partySize}
+					>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
 					<br/><br/>
 					<label for="message" id="message"> Special requests or messages to the brid and groom? </label>
+					<p>We kindly ask that all wedding guests are 18 plus. Please make us aware of any food alargy or any diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
 					<textarea
 						id="message"
 						name="message"

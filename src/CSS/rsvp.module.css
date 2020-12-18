@@ -26,11 +26,16 @@ textarea {
 	height: 100px;
 }
 
-input {
+p {
+	font-weight: normal;
+	font-size: 0.75em;
+}
+
+input, select {
 	float: right;
 }
 
-input[type=text] {
+input[type=text], select {
 	width: 33%;
 }
 

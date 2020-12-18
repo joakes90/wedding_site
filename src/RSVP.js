@@ -137,6 +137,7 @@ export default class RSVP extends Component {
 					/>					
 					<br/><br/>
 					<label for="attending"> Will you be attending? </label>
+					<br/>
 					<input
 						type="checkbox"
 						 id="attending"
@@ -146,6 +147,7 @@ export default class RSVP extends Component {
 					/>
 					<br/>
 					<label for="party"> Number of people in your party? </label>
+					<br/>
 					<select 
 						id="party"
 						name="party"
@@ -161,7 +163,7 @@ export default class RSVP extends Component {
 					</select>
 					<br/><br/>
 					<label for="message" id="message"> Special requests or messages to the brid and groom? </label>
-					<p>We kindly ask that all wedding guests are 18 plus. Please make us aware of any food alargy or any diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
+					<p>We kindly ask that all wedding guests are 18 plus. Please make us aware of any food alargy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
 					<textarea
 						id="message"
 						name="message"

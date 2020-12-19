@@ -48,7 +48,7 @@ export default class PhotoViewer extends Component {
     },
 ]
 		return (
-			<Lightbox images={images} allowRotate={false} showTitle={false}/>
+			<Lightbox images={images} allowRotate={false} showTitle={false} startIndex={this.props.startIndex} onClose={this.props.dismiss}/>
 		);
 	}
 }

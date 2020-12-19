@@ -12,7 +12,7 @@ export default class NavBar extends Component {
 				<a href="#photos"><li>Photos</li></a>
 				{/*<a href="#stream"><li>Live Stream</li></a> */}
 				<a href="#RSVP"><li>RSVP</li></a>
-				<li>Donate</li>
+				<li>Registry</li>
 			</ul>
 		);
 	}

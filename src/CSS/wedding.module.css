@@ -112,4 +112,28 @@ a {
 	text-align: center;
 	vertical-align: middle;
 }
- 
+
+/* Photo Grid styling */
+
+.photoGrid {
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: auto auto auto auto auto;
+	padding: 32px;
+	max-width: 1100px;
+	margin: auto;
+	height: 500px;
+	background-color: black;
+	border-radius: 45px;
+}
+
+.photoGrid Img {
+	height: 210px;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+}
+
+.photoGrid Img:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
-import styles from './CSS/wedding.module.css';
 
 export default class PhotoViewer extends Component {
 
@@ -49,10 +48,7 @@ export default class PhotoViewer extends Component {
     },
 ]
 		return (
-			<div className={styles.container}>
-				<h3 className={styles.title}>{this.props.title}</h3>
-				<Lightbox images={images} allowRotate={false} showTitle={false}/>
-			</div>
+			<Lightbox images={images} allowRotate={false} showTitle={false}/>
 		);
 	}
 }

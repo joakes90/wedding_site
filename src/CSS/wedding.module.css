@@ -22,6 +22,11 @@ a {
 	padding-top: 150px;
 }
 
+/* Hashtag Styling */
+.hashTag {
+	padding-top: 100px;
+}
+
 /* Navigation component styling */
 .navigationBarItems {
 	position: fixed;
@@ -65,7 +70,6 @@ a {
 /* Hero image component styling */
 .heroBanner {
 	display: flex;
-	padding-top: 125px;
 	max-width: 1100px;
 	margin: auto;
 	font-family: Zapfino;
@@ -136,4 +140,30 @@ a {
 .photoGrid Img:hover {
 	transform: scale(1.1);
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	  
+  .photoGrid {
+	grid-gap: 8px;
+	grid-template-columns: auto auto auto;
+	padding: 16px;
+	max-width: 500px;
+	margin: auto;
+	height: 400px;
+}
+
+	.photoGrid img {
+		height: 105px;
+	}
+}
+/* Footer */
+
+.footer {
+	height: 50px;
+}
+
+.footer p {
+	text-align: center;
+	padding-top: 45px;
 }

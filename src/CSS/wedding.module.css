@@ -121,9 +121,9 @@ a {
 
 .photoGrid {
 	display: grid;
-	grid-gap: 16px;
+	grid-gap: px;
 	grid-template-columns: auto auto auto auto auto;
-	padding: 32px;
+	padding: 16px;
 	max-width: 1100px;
 	margin: auto;
 	height: 500px;
@@ -132,7 +132,7 @@ a {
 }
 
 .photoGrid Img {
-	height: 210px;
+	height: 175px;
 	border-radius: 5px;
 	transition: all .2s ease-in-out;
 }
@@ -154,7 +154,7 @@ a {
 }
 
 	.photoGrid img {
-		height: 105px;
+		height: 110px;
 	}
 }
 /* Footer */

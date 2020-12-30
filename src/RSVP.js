@@ -163,7 +163,7 @@ export default class RSVP extends Component {
 					</select>
 					<br/><br/>
 					<label for="message" id="message"> Special requests or messages to the brid and groom? </label>
-					<p>We kindly ask that all wedding guests are 18 plus. Please make us aware of any food alargy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
+					<p>Adult reception to follow. Please make us aware of any food alargy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
 					<textarea
 						id="message"
 						name="message"

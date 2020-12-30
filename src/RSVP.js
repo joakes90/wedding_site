@@ -83,16 +83,13 @@ export default class RSVP extends Component {
 			partySize: this.state.partySize,
 			submittedDate: new Date()
 		};
-		
-		RSVPDataService.create(data)
-		.then(() => {
-			console.log("New item created");
+		try {
+			RSVPDataService.create(data)
 			toast.success("Your RSVP has been received");
-		})
-		.catch((e) => {
+		} catch(e) {
 			console.log(e);
-			toast.warning("There was a problem receiving your RSVP");
-		});
+			toast.error("Your RSVP could not be sent");
+		}		
 	}
 	
 	render() {

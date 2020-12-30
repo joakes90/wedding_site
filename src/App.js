@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Map from './Map.js';
 import NavBar from './NavBar.js';
 import HeroBanner from './HeroBanner.js';
-import PlaceHolder from './PlaceHolder.js';
 import RSVP from './RSVP.js';
 import PhotoGrid from './PhotoGrid.js';
 import Footer from './Footer.js';

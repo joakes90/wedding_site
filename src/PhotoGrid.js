@@ -19,7 +19,7 @@ export default class PhotoGrid extends Component {
 	onImgClick(event) {
 		let imageIndex = event.target.id;
 		console.log(imageIndex);
-		let viewer = <PhotoViewer startIndex={imageIndex == 0 ? null : imageIndex} dismiss={this.dismissViewer} id="viewer"/>
+		let viewer = <PhotoViewer startIndex={imageIndex === 0 ? null : imageIndex} dismiss={this.dismissViewer} id="viewer"/>
 		ReactDOM.render(viewer, document.getElementById('viewer_container'));
 	}
 	
@@ -29,15 +29,15 @@ export default class PhotoGrid extends Component {
 			<div className={styles.container}>
 				<h3 className={styles.title}>{this.props.title}</h3>
 				<div className={styles.photoGrid}>
-					<img src="images/viewer_images/thumbnails/IMG_1591_thumbnail.jpeg" onClick={this.onImgClick} id={0}/>
-					<img src="images/viewer_images/thumbnails/IMG_1534_thumbnail.jpeg" onClick={this.onImgClick} id={1}/>
-					<img src="images/viewer_images/thumbnails/IMG_1505_thumbnail.jpeg" onClick={this.onImgClick} id={2}/>
-					<img src="images/viewer_images/thumbnails/IMG_1485_thumbnail.jpeg" onClick={this.onImgClick} id={3}/>
-					<img src="images/viewer_images/thumbnails/IMG_1479_thumbnail.jpeg" onClick={this.onImgClick} id={4}/>
-					<img src="images/viewer_images/thumbnails/IMG_1456_thumbnail.jpeg" onClick={this.onImgClick} id={5}/>
-					<img src="images/viewer_images/thumbnails/IMG_1326_thumbnail.jpeg" onClick={this.onImgClick} id={6}/>
-					<img src="images/viewer_images/thumbnails/IMG_1311_thumbnail.jpeg" onClick={this.onImgClick} id={7}/>
-					<img src="images/viewer_images/thumbnails/IMG_1293_thumbnail.jpeg" onClick={this.onImgClick} id={8}/>
+					<img src="images/viewer_images/thumbnails/IMG_1591_thumbnail.jpeg" onClick={this.onImgClick} id={0} alt="couple 1"/>
+					<img src="images/viewer_images/thumbnails/IMG_1534_thumbnail.jpeg" onClick={this.onImgClick} id={1} alt="couple 2"/>
+					<img src="images/viewer_images/thumbnails/IMG_1505_thumbnail.jpeg" onClick={this.onImgClick} id={2} alt="couple 3"/>
+					<img src="images/viewer_images/thumbnails/IMG_1485_thumbnail.jpeg" onClick={this.onImgClick} id={3} alt="couple 4"/>
+					<img src="images/viewer_images/thumbnails/IMG_1479_thumbnail.jpeg" onClick={this.onImgClick} id={4} alt="couple 5"/>
+					<img src="images/viewer_images/thumbnails/IMG_1456_thumbnail.jpeg" onClick={this.onImgClick} id={5} alt="couple 6"/>
+					<img src="images/viewer_images/thumbnails/IMG_1326_thumbnail.jpeg" onClick={this.onImgClick} id={6} alt="couple 7"/>
+					<img src="images/viewer_images/thumbnails/IMG_1311_thumbnail.jpeg" onClick={this.onImgClick} id={7} alt="couple 8"/>
+					<img src="images/viewer_images/thumbnails/IMG_1293_thumbnail.jpeg" onClick={this.onImgClick} id={8} alt="couple 9"/>
 				</div>
 			</div>
 		

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import styles from './CSS/map.module.css';
+import styles from './CSS/wedding.module.css';
+import map_styles from './CSS/map.module.css';
 import GoogleMapReact from 'google-map-react';
 
 
@@ -21,10 +22,10 @@ export default class Map extends Component {
 	
 	render() {
 		return (
-			<div className={styles.container}>
+			<div className={map_styles.container}>
 				<h3 className={styles.title}>Gaillardia Country Club</h3>
-				<p className={styles.directions}>Click marker for directions</p>
-				<div className={styles.mapContainer}>
+				<p className={map_styles.directions}>Click marker for directions</p>
+				<div className={map_styles.mapContainer}>
 					<GoogleMapReact
 					  bootstrapURLKeys={{ key: process.env.REACT_APP_GAPI}}
 					  defaultCenter={location.center}

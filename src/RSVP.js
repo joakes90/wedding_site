@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import RSVPDataService from "./Services/RSVPDataService.js";
-import styles from './CSS/rsvp.module.css';
+import styles from './CSS/wedding.module.css';
+import rsvp_styles from './CSS/rsvp.module.css';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -94,7 +95,7 @@ export default class RSVP extends Component {
 	
 	render() {
 		return(
-			<div className={styles.container}>
+			<div className={rsvp_styles.container}>
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>

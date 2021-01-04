@@ -1,5 +1,18 @@
-/* App style */
+@font-face {
+    font-family: 'Didot';
+    src: url('./fonts/Didot.ttc') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Zapfino';
+    src: url('./fonts/Zapfino.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* App style */
 body {
 	background-color: #F4F0DB;
 }

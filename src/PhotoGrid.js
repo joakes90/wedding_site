@@ -17,9 +17,8 @@ export default class PhotoGrid extends Component {
 	}
 
 	onImgClick(event) {
-		let imageIndex = event.target.id;
-		console.log(imageIndex);
-		let viewer = <PhotoViewer startIndex={imageIndex === 0 ? null : imageIndex} dismiss={this.dismissViewer} id="viewer"/>
+		var imageIndex = event.target.id;
+		let viewer = <PhotoViewer startIndex={imageIndex == 0 ? null : imageIndex} dismiss={this.dismissViewer} id="viewer"/>
 		ReactDOM.render(viewer, document.getElementById('viewer_container'));
 	}
 	
@@ -31,87 +30,105 @@ export default class PhotoGrid extends Component {
 				<div className={styles.photoGrid}>
 					<div>
 						<div className={styles.photoContainer}>
-						<img src="images/viewer_images/thumbnails/IMG_1591_thumbnail.jpeg" onClick={this.onImgClick} id={0} alt="couple 1"/>
+							<img src="images/viewer_images/thumbnails/IMG_1505_thumbnail.jpeg" onClick={this.onImgClick} id={0} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1534_thumbnail.jpeg" onClick={this.onImgClick} id={1} alt="couple 2"/>
+							<img src="images/viewer_images/thumbnails/IMG_1485_thumbnail.jpeg" onClick={this.onImgClick} id={1} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1505_thumbnail.jpeg" onClick={this.onImgClick} id={2} alt="couple 3"/>
+							<img src="images/viewer_images/thumbnails/IMG_1479_thumbnail.jpeg" onClick={this.onImgClick} id={2} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1485_thumbnail.jpeg" onClick={this.onImgClick} id={3} alt="couple 4"/>
+							<img src="images/viewer_images/thumbnails/IMG_1326_thumbnail.jpeg" onClick={this.onImgClick} id={3} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1479_thumbnail.jpeg" onClick={this.onImgClick} id={4} alt="couple 5"/>
+							<img src="images/viewer_images/thumbnails/IMG_1293_thumbnail.jpeg" onClick={this.onImgClick} id={4} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1456_thumbnail.jpeg" onClick={this.onImgClick} id={5} alt="couple 6"/>
+							<img src="images/viewer_images/thumbnails/IMG_1297_thumbnail.jpeg" onClick={this.onImgClick} id={5} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1326_thumbnail.jpeg" onClick={this.onImgClick} id={6} alt="couple 7"/>
+							<img src="images/viewer_images/thumbnails/IMG_1301_thumbnail.jpeg" onClick={this.onImgClick} id={6} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1311_thumbnail.jpeg" onClick={this.onImgClick} id={7} alt="couple 8"/>
+							<img src="images/viewer_images/thumbnails/IMG_1305_thumbnail.jpeg" onClick={this.onImgClick} id={7} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1293_thumbnail.jpeg" onClick={this.onImgClick} id={8} alt="couple 9"/>
+							<img src="images/viewer_images/thumbnails/IMG_4119_thumbnail.jpeg" onClick={this.onImgClick} id={8} alt="This was our first trip we took together to Austin."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was our first trip we took together to Austin.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1297_thumbnail.jpeg" onClick={this.onImgClick} id={9} alt="couple 10"/>
+							<img src="images/viewer_images/thumbnails/IMG_4311_thumbnail.jpeg" onClick={this.onImgClick} id={9} alt="This was when Mattie almost stole a baby Wallaby."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was when Mattie almost stole a baby Wallaby.</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1301_thumbnail.jpeg" onClick={this.onImgClick} id={10} alt="couple 11"/>
+							<img src="images/viewer_images/thumbnails/IMG_0076_thumbnail.jpeg" onClick={this.onImgClick} id={10} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1305_thumbnail.jpeg" onClick={this.onImgClick} id={11} alt="couple 12"/>
+							<img src="images/viewer_images/thumbnails/IMG_0164_thumbnail.jpeg" onClick={this.onImgClick} id={11} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_4119_thumbnail.jpeg" onClick={this.onImgClick} id={12} alt="couple 13"/>
+							<img src="images/viewer_images/thumbnails/IMG_0224_thumbnail.jpeg" onClick={this.onImgClick} id={12} alt="Photos from our first engagement shoot!"/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>Photos from our first engagement shoot!</p>
 					</div>
 					<div>
 						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_4311_thumbnail.jpeg" onClick={this.onImgClick} id={13} alt="couple 14"/>
+							<img src="images/viewer_images/thumbnails/IMG_1309_thumbnail.jpeg" onClick={this.onImgClick} id={13} alt="This was right after we got engaged."/>
 						</div>
-						<p className={styles.photoCaption}>Hello this is a caption</p>
+						<p className={styles.photoCaption}>This was right after we got engaged.</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_5347_thumbnail.jpeg" onClick={this.onImgClick} id={14} alt="Winston acting like he is a tortured animal and not the most loved dog in the world."/>
+						</div>
+						<p className={styles.photoCaption}>Winston acting like he is a tortured animal and not the most loved dog in the world.</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_0684_thumbnail.jpeg" onClick={this.onImgClick} id={15} alt="Us at our first OU football game together."/>
+						</div>
+						<p className={styles.photoCaption}>Us at our first OU football game together.</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_5989_thumbnail.jpeg" onClick={this.onImgClick} id={16} alt="A picture of Mattie’s engagement ring."/>
+						</div>
+						<p className={styles.photoCaption}>A picture of Mattie’s engagement ring.</p>
 					</div>
 				</div>
 			</div>

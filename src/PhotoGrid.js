@@ -83,6 +83,36 @@ export default class PhotoGrid extends Component {
 						</div>
 						<p className={styles.photoCaption}>Hello this is a caption</p>
 					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_1297_thumbnail.jpeg" onClick={this.onImgClick} id={9} alt="couple 10"/>
+						</div>
+						<p className={styles.photoCaption}>Hello this is a caption</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_1301_thumbnail.jpeg" onClick={this.onImgClick} id={10} alt="couple 11"/>
+						</div>
+						<p className={styles.photoCaption}>Hello this is a caption</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_1305_thumbnail.jpeg" onClick={this.onImgClick} id={11} alt="couple 12"/>
+						</div>
+						<p className={styles.photoCaption}>Hello this is a caption</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_4119_thumbnail.jpeg" onClick={this.onImgClick} id={12} alt="couple 13"/>
+						</div>
+						<p className={styles.photoCaption}>Hello this is a caption</p>
+					</div>
+					<div>
+						<div className={styles.photoContainer}>
+							<img src="images/viewer_images/thumbnails/IMG_4311_thumbnail.jpeg" onClick={this.onImgClick} id={13} alt="couple 14"/>
+						</div>
+						<p className={styles.photoCaption}>Hello this is a caption</p>
+					</div>
 				</div>
 			</div>
 		

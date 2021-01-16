@@ -46,6 +46,26 @@ export default class PhotoViewer extends Component {
         url:"images/viewer_images/IMG_1293.jpeg",
         title:"Mattie and Justin 9"
     },
+	{
+        url:"images/viewer_images/IMG_1297.jpeg",
+        title:"Mattie and Justin 10"
+    },
+    {
+        url:"images/viewer_images/IMG_1301.jpeg",
+        title:"Mattie and Justin 11"
+    },
+	{
+        url:"images/viewer_images/IMG_1305.jpeg",
+        title:"Mattie and Justin 12"
+    },
+	{
+        url:"images/viewer_images/IMG_4119.jpeg",
+        title:"Mattie and Justin 13"
+    },
+        {
+        url:"images/viewer_images/IMG_4311.jpeg",
+        title:"Mattie and Justin 14"
+    },
 ]
 		return (
 			<Lightbox images={images} allowRotate={false} showTitle={false} startIndex={this.props.startIndex} onClose={this.props.dismiss}/>

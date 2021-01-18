@@ -180,6 +180,18 @@ a {
 		height: 100px;
 	}
 }
+
+/* FAQ styling */
+
+.box {
+	background-color: #EADEFF;
+	padding: 24px;
+	border-radius: 15px;
+	font-family: Didot;
+	font-weight: bold;
+	
+}
+
 /* Footer */
 
 .footer {

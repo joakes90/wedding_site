@@ -22,7 +22,7 @@ export default class FAQ extends Component {
 					<p>&emsp; Complementary valet parking will be provided.</p>
 					
 					<h4>Is the venue wheelchair accessible?</h4>
-					<p>&emsp; If you will need help getting around the club let us. Golf carts 
+					<p>&emsp; If you will need help getting around the club let us know. Golf carts 
 					will be available to take guests with limited mobility to the location 
 					of the ceremony and reception.</p>
 					
@@ -33,6 +33,9 @@ export default class FAQ extends Component {
 					The final decision will be made closer to the date of the wedding when 
 					a more accurate forecast will be available.The majority of the reception 
 					is expected to take place inside with some outdoor access.</p>
+					
+					<h4>Covid-19</h4>
+					<p>&emsp; We will continue to follow the situation closly and will follow best practices. Check back later for more info</p>
 				</div>
 			</div>
 		);

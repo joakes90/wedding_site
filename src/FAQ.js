@@ -35,7 +35,7 @@ export default class FAQ extends Component {
 					is expected to take place inside with some outdoor access.</p>
 					
 					<h4>Covid-19</h4>
-					<p>&emsp; We will continue to follow the situation closly and will follow best practices. Check back later for more info</p>
+					<p>&emsp; We will continue to follow the situation closly and will follow best practices. Check back later for the most up to date info</p>
 				</div>
 			</div>
 		);

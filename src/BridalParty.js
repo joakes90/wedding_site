@@ -11,7 +11,7 @@ export default class Party extends Component {
 				<h3 className={styles.title}>Bridal Party</h3>
 				<div class={styles.bridalGrid}>
 				<PartyMember image="images/bre.png" name="Bri Brown" title="Maid of Honor"/>
-				<PartyMember image="images/" name="Josh Oakes" title="Best Man"/>
+				<PartyMember image="images/josh.png" name="Josh Oakes" title="Best Man"/>
 				<PartyMember image="images/molly.png" name="Molly Hudson" title="Bride's Maid"/>
 				<PartyMember image="images/pat.png" name="Patrick Lamascus" title="Groomsman"/>
 				</div>	

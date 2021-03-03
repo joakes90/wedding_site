@@ -17,7 +17,6 @@ export default class RSVP extends Component {
 		this.onChangePartySize = this.onChangePartySize.bind(this);
 		this.onChangeMessage = this.onChangeMessage.bind(this);
 		this.onChangeEmail = this.onChangeEmail.bind(this);
-		this.onChangeSong = this.onChangeSong.bind(this);
 		this.saveGuest = this.saveGuest.bind(this);
 
 		this.state = {
@@ -25,7 +24,6 @@ export default class RSVP extends Component {
 			message: "",
 			email: "",
 			state: "",
-			song: "",
 			isAttending: false,
 			partySize: 0,
 		};
@@ -40,12 +38,6 @@ export default class RSVP extends Component {
 	onChangeEmail(event) {
 		this.setState({
 			email: event.target.value
-		});
-	}
-	
-	onChangeSong(event) {
-		this.setState({
-			song: event.target.value
 		});
 	}
 	
@@ -79,7 +71,6 @@ export default class RSVP extends Component {
 			name: this.state.name,
 			message: this.state.message,
 			email: this.state.email,
-			song: this.state.song,
 			attending: this.state.isAttending,
 			partySize: this.state.partySize,
 			submittedDate: new Date()
@@ -122,17 +113,7 @@ export default class RSVP extends Component {
 						onChange={this.onChangeEmail}
 						value={this.state.email}
 					/>
-					<br/>
-					<label for="song">Song requests </label>
-					<br/>
-					<input
-						type="text"
-						id="song"
-						name="song"
-						placeholder="Celebrate by Kool and the Gang"
-						onChange={this.onChangeSong}
-						value={this.state.song}
-					/>					
+		
 					<br/><br/>
 					<label for="attending"> Will you be attending? </label>
 					<br/>

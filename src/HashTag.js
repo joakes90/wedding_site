@@ -7,7 +7,7 @@ export default class HashTag extends Component {
 		
 		return (
 				<div className={styles.hashTag}>
-					<h2 className={styles.title}>#OfficallyOakes</h2>
+					<h2 className={styles.title}>#OfficiallyOakes</h2>
 				</div>
 		);
 	}

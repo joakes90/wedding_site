@@ -141,8 +141,8 @@ export default class RSVP extends Component {
 						<option value="5">5</option>
 					</select>
 					<br/><br/>
-					<label for="message" id="message"> Special requests or messages to the brid and groom? </label>
-					<p>Adult reception to follow. Please make us aware of any food alargy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
+					<label for="message" id="message"> Special requests or messages to the bride and groom? </label>
+					<p>Adult reception to follow. Please make us aware of any food allergy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
 					<textarea
 						id="message"
 						name="message"

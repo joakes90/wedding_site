@@ -35,7 +35,7 @@ export default class FAQ extends Component {
 					is expected to take place inside with some outdoor access.</p>
 					
 					<h4>Covid-19</h4>
-					<p>&emsp; We will continue to follow the situation closly and will follow best practices. Check back later for the most up to date info</p>
+					<p>&emsp; COVID-19 vaccination will be required for attendance by all persons able to receive it. If you are immune compromised or otherwise unable to be vaccinated by October 1st 2021 please leave a message with your RSVP below and the bride will contact you to help organize a solution to insure your attendance is safe for both yourself and the other guests.</p>
 				</div>
 			</div>
 		);

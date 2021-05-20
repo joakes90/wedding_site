@@ -7,7 +7,7 @@ export default class Party extends Component {
 	
 	render() {
 		return(
-			<div>
+			<div className={styles.container}>
 				<h3 className={styles.title}>Bridal Party</h3>
 				<div class={styles.bridalGrid}>
 				<PartyMember image="images/bre.png" name="Bri Brown" title="Maid of Honor"/>

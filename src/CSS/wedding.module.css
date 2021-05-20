@@ -169,11 +169,11 @@ a {
 	  
   .photoGrid {
 	grid-gap: 8px;
-	grid-template-columns: auto auto;
+	grid-template-columns: auto auto auto;
 	padding: 8px;
 	max-width: 500px;
 	margin: auto;
-	height: 1900px;
+	height: 1200px;
 }
 
 	.photoGrid img {

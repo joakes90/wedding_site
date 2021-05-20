@@ -125,72 +125,61 @@ export default class PhotoGrid extends Component {
 							<img src="images/viewer_images/thumbnails/DSC_6_thumbnail.jpg" onClick={this.onImgClick} id={15} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
-					</div>
-					
+					</div>					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6663_thumbnail.jpg" onClick={this.onImgClick} id={16} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6686_thumbnail.jpg" onClick={this.onImgClick} id={17} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6725_thumbnail.jpg" onClick={this.onImgClick} id={18} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6751_thumbnail.jpg" onClick={this.onImgClick} id={19} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6775_thumbnail.jpg" onClick={this.onImgClick} id={20} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_6825_thumbnail.jpg" onClick={this.onImgClick} id={21} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_7007_thumbnail.jpg" onClick={this.onImgClick} id={22} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_7016_thumbnail.jpg" onClick={this.onImgClick} id={23} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
 					<div>
 						<div className={styles.photoContainer}>
 							<img src="images/viewer_images/thumbnails/DSC_7029_thumbnail.jpg" onClick={this.onImgClick} id={24} alt=" "/>
 						</div>
 						<p className={styles.photoCaption}></p>
 					</div>
-					
-					
 				</div>
 			</div>
 		

@@ -15,7 +15,7 @@ export class Page extends Component {
 				<div>
 					<NavBar/>
 					<HashTag/>
-					<a id="hero"><HeroBanner image="images/couple_croped_gray.jpg" title="Save the date." date="Oct 17th 2021" event="The wedding of Justin Oakes and Madeline Hudson"/></a>
+					<a id="hero"><HeroBanner image="images/masthead.jpg" title="Save the date." date="Oct 17th 2021" event="The wedding of Justin Oakes and Madeline Hudson"/></a>
 					<a id="map"><Map/></a>
 					<a id="photos"><PhotoGrid title="Photos"/></a>
 					<a id="party"><Party/></a>

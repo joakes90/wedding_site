@@ -8,6 +8,7 @@ import FAQ from './FAQ.js';
 import PhotoGrid from './PhotoGrid.js';
 import Footer from './Footer.js';
 import HashTag from './HashTag.js';
+import Registry from './Registry.js';
 
 export class Page extends Component {
 		render() {
@@ -21,6 +22,7 @@ export class Page extends Component {
 					<a id="party"><Party/></a>
 					<a id="FAQ"><FAQ/></a>
 					<a id="RSVP"><RSVP/></a>
+					<a id="Registry"><Registry/></a>
 					<Footer/>
 				</div>
 			);

@@ -109,6 +109,19 @@ a {
 	font-size: 1.75vw;
 }
 
+.linklist {
+	margin: auto;
+	max-width: 600px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.linklist img {
+	padding-top: 16px;
+	display: block;
+	margin: auto;
+}
+
 /* Place holder styling */
 
 .placeHolder {

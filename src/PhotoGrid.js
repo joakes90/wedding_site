@@ -24,137 +24,46 @@ export default class PhotoGrid extends Component {
 	
 	
 	render() {
+	let photos = [
+			{ 'src': 'IMG_1505_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1485_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1479_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1293_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1297_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1301_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1305_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_4311_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_0076_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_0164_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_0224_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_1309_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_0684_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'IMG_5989_thumbnail.jpeg', 'alt': '' },
+			{ 'src': 'DSC_1-1_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6663_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6686_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6725_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6751_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6775_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_6825_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_7007_thumbnail.jpg', 'alt': '' },
+			{ 'src': 'DSC_7016_thumbnail.jpg', 'alt': '' },
+		];
 		return (
 			<div className={styles.container}>
 				<h3 className={styles.title}>{this.props.title}</h3>
 				<div className={styles.photoGrid}>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1505_thumbnail.jpeg" onClick={this.onImgClick} id={0} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1485_thumbnail.jpeg" onClick={this.onImgClick} id={1} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1479_thumbnail.jpeg" onClick={this.onImgClick} id={2} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1293_thumbnail.jpeg" onClick={this.onImgClick} id={3} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1297_thumbnail.jpeg" onClick={this.onImgClick} id={4} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1301_thumbnail.jpeg" onClick={this.onImgClick} id={5} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1305_thumbnail.jpeg" onClick={this.onImgClick} id={6} alt="This was the night we got engaged. Justin took Mattie to the Yukon lights where he proposed."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_4311_thumbnail.jpeg" onClick={this.onImgClick} id={7} alt="This was when Mattie almost stole a baby Wallaby."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_0076_thumbnail.jpeg" onClick={this.onImgClick} id={8} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_0164_thumbnail.jpeg" onClick={this.onImgClick} id={9} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_0224_thumbnail.jpeg" onClick={this.onImgClick} id={10} alt="Photos from our first engagement shoot!"/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_1309_thumbnail.jpeg" onClick={this.onImgClick} id={11} alt="This was right after we got engaged."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_0684_thumbnail.jpeg" onClick={this.onImgClick} id={12} alt="Us at our first OU football game together."/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/IMG_5989_thumbnail.jpeg" onClick={this.onImgClick} id={13} alt="A picture of Mattie’s engagement ring."/>
-						</div>
-					</div>
-					
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_1-1_thumbnail.jpg" onClick={this.onImgClick} id={14} alt=" "/>
-						</div>
-					</div>
-					
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6_thumbnail.jpg" onClick={this.onImgClick} id={15} alt=" "/>
-						</div>
-					</div>					
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6663_thumbnail.jpg" onClick={this.onImgClick} id={16} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6686_thumbnail.jpg" onClick={this.onImgClick} id={17} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6725_thumbnail.jpg" onClick={this.onImgClick} id={18} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6751_thumbnail.jpg" onClick={this.onImgClick} id={19} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6775_thumbnail.jpg" onClick={this.onImgClick} id={20} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_6825_thumbnail.jpg" onClick={this.onImgClick} id={21} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_7007_thumbnail.jpg" onClick={this.onImgClick} id={22} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_7016_thumbnail.jpg" onClick={this.onImgClick} id={23} alt=" "/>
-						</div>
-					</div>
-					<div>
-						<div className={styles.photoContainer}>
-							<img src="images/viewer_images/thumbnails/DSC_7029_thumbnail.jpg" onClick={this.onImgClick} id={24} alt=" "/>
-						</div>
-					</div>
+					{photos.map( ( photo, key ) => {
+						return (
+							<div>
+								<div className={styles.photoContainer}>
+									<img src={'images/viewer_images/thumbnails/' + photo.src} id={key} alt={photo.alt} onClick={this.onImgClick}/>
+								</div>
+							</div>
+						);
+					} )
+					}
 				</div>
 			</div>
 		

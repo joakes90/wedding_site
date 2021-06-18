@@ -43,7 +43,8 @@ export default class RSVP extends Component {
 	
 	onChangeAttending(event) {
 	let attending = event.target.checked;
-	let party = Number(document.getElementById('party').value);
+	let partyFieldVaue = Number(document.getElementById('party').value);
+	let party = isNaN(partyFieldVaue) ? 1 : partyFieldVaue;
 		this.setState({
 			isAttending: attending,
 			partySize: (attending ? party : 0)
@@ -51,8 +52,10 @@ export default class RSVP extends Component {
 	}
 	
 	onChangePartySize(event) {
+		let fieldValue = Number(event.target.value);
+		let partySize = isNaN(fieldValue) ? 1 : fieldValue;
 		this.setState({
-			partySize: Number(event.target.value)
+			partySize: partySize
 		});
 	}
 	

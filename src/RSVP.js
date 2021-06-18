@@ -43,7 +43,8 @@ export default class RSVP extends Component {
 	
 	onChangeAttending(event) {
 	let attending = event.target.checked;
-	let party = Number(document.getElementById('party').value);
+	let partyFieldVaue = Number(document.getElementById('party').value);
+	let party = isNaN(partyFieldVaue) ? 1 : partyFieldVaue;
 		this.setState({
 			isAttending: attending,
 			partySize: (attending ? party : 0)
@@ -51,8 +52,10 @@ export default class RSVP extends Component {
 	}
 	
 	onChangePartySize(event) {
+		let fieldValue = Number(event.target.value);
+		let partySize = isNaN(fieldValue) ? 1 : fieldValue;
 		this.setState({
-			partySize: Number(event.target.value)
+			partySize: partySize
 		});
 	}
 	
@@ -77,6 +80,7 @@ export default class RSVP extends Component {
 		};
 		try {
 			RSVPDataService.create(data)
+			this.props.dismiss();
 			toast.success("Your RSVP has been received");
 		} catch(e) {
 			console.log(e);
@@ -86,7 +90,7 @@ export default class RSVP extends Component {
 	
 	render() {
 		return(
-			<div className={rsvp_styles.container}>
+			<div className={rsvp_styles.container} id="rsvp_container">
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>

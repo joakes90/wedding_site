@@ -90,7 +90,7 @@ export default class RSVP extends Component {
 	
 	render() {
 		return(
-			<div className={this.state.closed ? rsvp_styles.closed : rsvp_styles.container} id="rsvp_container">
+			<div className={rsvp_styles.container} id="rsvp_container">
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>

@@ -80,6 +80,7 @@ export default class RSVP extends Component {
 		};
 		try {
 			RSVPDataService.create(data)
+			this.props.dismiss();
 			toast.success("Your RSVP has been received");
 		} catch(e) {
 			console.log(e);
@@ -89,7 +90,7 @@ export default class RSVP extends Component {
 	
 	render() {
 		return(
-			<div className={rsvp_styles.container}>
+			<div className={this.state.closed ? rsvp_styles.closed : rsvp_styles.container} id="rsvp_container">
 				<h3 className={styles.title}>RSVP</h3>
 				<form>
 					<label for="name">Guest name </label>

@@ -18,12 +18,14 @@ export default class RSVP extends Component {
 		this.onChangeMessage = this.onChangeMessage.bind(this);
 		this.onChangeEmail = this.onChangeEmail.bind(this);
 		this.saveGuest = this.saveGuest.bind(this);
+		this.onChangeVax = this.onChangeVax.bind(this);
 
 		this.state = {
 			name: "",
 			message: "",
 			email: "",
 			state: "",
+			vaccinated: "needsTest",
 			isAttending: false,
 			partySize: 0,
 		};
@@ -42,12 +44,12 @@ export default class RSVP extends Component {
 	}
 	
 	onChangeAttending(event) {
-	let attending = event.target.checked;
-	let party = Number(document.getElementById('party').value);
-		this.setState({
-			isAttending: attending,
-			partySize: (attending ? party : 0)
-		});
+		let attending = event.target.checked;
+		let party = Number(document.getElementById('party').value);
+			this.setState({
+				isAttending: attending,
+				partySize: (attending ? party : 0)
+			});
 	}
 	
 	onChangePartySize(event) {
@@ -62,17 +64,29 @@ export default class RSVP extends Component {
 		});
 	}
 
+	onChangeVax(event) {
+		this.setState({
+			vaccinated: event.target.value
+		});
+	}
+
 	saveGuest() {
 		if (this.state.name === "") {
 			toast.warning("Please give your name and indicate if you will be attending");
 			return;
 		}
+		if (this.state.email === "" && this.state.isAttending) {
+			toast.warning("Please provide an email where you can received updates and information about the wedding")
+			return;
+		}
+		let vaxStatus = this.state
 		let data = {
 			name: this.state.name,
 			message: this.state.message,
 			email: this.state.email,
 			attending: this.state.isAttending,
 			partySize: this.state.partySize,
+			vaccinated: (this.state.isAttending ? this.state.vaccinated : ""),
 			submittedDate: new Date()
 		};
 		try {
@@ -103,7 +117,7 @@ export default class RSVP extends Component {
 					 	value={this.state.name}
 					/>
 					<br/>
-					<label for="email">Email where you can be reached (optional) </label>
+					<label for="email">Email where you can be reached </label>
 					<br/>
 					<input
 						type="email"
@@ -140,6 +154,11 @@ export default class RSVP extends Component {
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
+					<br/><br/>
+					<label for="vaccination" id="vaccination">Vaccination status </label>
+					<br/>
+					<input type="radio" name="vaccination" value="hasVax" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "hasVax"}/> <p>I am fully vaccinated or will have received my final shot 2 weeks before October 17th 2021</p>
+					<input type="radio" name="vaccination" value="needsTest" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "needsTest"}/> <p>I will provide a negative covid test dated within 48 hours prior to the ceremony</p>
 					<br/><br/>
 					<label for="message" id="message"> Special requests or messages to the bride and groom? </label>
 					<p>Adult reception to follow. Please make us aware of any food allergy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>

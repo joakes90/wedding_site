@@ -19,7 +19,7 @@ export default class FAQ extends Component {
 					<p>&emsp; This will be a formal event. While black tie is not strictly required it is appreciated.</p>
 					
 					<h4>What is the parking situation?</h4>
-					<p>&emsp; Complementary valet parking will be provided.</p>
+					<p>&emsp; Free parking will be available near the clubhouse.</p>
 					
 					<h4>Is the venue wheelchair accessible?</h4>
 					<p>&emsp; If you will need help getting around the club let us know. Golf carts 

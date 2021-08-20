@@ -23,13 +23,13 @@ export default class FAQ extends Component {
 					<b>Gaillardia Dress code.</b>
 						<li> <b> Men </b> </li>
 							<ul>
-								<li>dress shirt</li>
-								<li>dress pants</li>
-								<li>dress pants suit and tie encouraged</li>
+								<li>Dress shirt</li>
+								<li>Dress pants</li>
+								<li>Suit and tie encouraged</li>
 							</ul>
 						<li> <b> Women </b> </li>
 							<ul>
-								<li>long formal dress or pants suit</li>
+								<li>Long formal dress or pants suit</li>
 							</ul>
 					</ul>
 					</p>

@@ -172,7 +172,6 @@ export default class RSVP extends Component {
 					<input type="radio" name="vaccination" value="hasVax" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "hasVax"}/> <p>I am fully vaccinated or will have received my final shot 2 weeks before October 17th 2021</p>
 					<input type="radio" name="vaccination" value="needsTest" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "needsTest"}/> <p>I will provide a negative covid test dated within 48 hours prior to the ceremony</p>
 					<br/><br/>
-
 					<label for="acknowledge"> I have read and agree to the <a href="#FAQ" class={rsvp_styles.cocLink}> Code of Conduct</a></label>
 					<br/>					
 					<input

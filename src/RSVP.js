@@ -19,6 +19,7 @@ export default class RSVP extends Component {
 		this.onChangeEmail = this.onChangeEmail.bind(this);
 		this.saveGuest = this.saveGuest.bind(this);
 		this.onChangeVax = this.onChangeVax.bind(this);
+		this.onChangeAcknowledge = this.onChangeAcknowledge.bind(this);
 
 		this.state = {
 			name: "",
@@ -27,6 +28,7 @@ export default class RSVP extends Component {
 			state: "",
 			vaccinated: "needsTest",
 			isAttending: false,
+			acknowledge: false, 
 			partySize: 0,
 		};
 	}
@@ -73,6 +75,12 @@ export default class RSVP extends Component {
 		});
 	}
 
+	onChangeAcknowledge(event) {
+		this.setState({
+			acknowledge: event.target.checked
+		});
+	}
+	
 	saveGuest() {
 		if (this.state.name === "") {
 			toast.warning("Please give your name and indicate if you will be attending");
@@ -164,6 +172,17 @@ export default class RSVP extends Component {
 					<input type="radio" name="vaccination" value="hasVax" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "hasVax"}/> <p>I am fully vaccinated or will have received my final shot 2 weeks before October 17th 2021</p>
 					<input type="radio" name="vaccination" value="needsTest" onChange={this.onChangeVax} disabled={!this.state.isAttending} checked={this.state.vaccinated === "needsTest"}/> <p>I will provide a negative covid test dated within 48 hours prior to the ceremony</p>
 					<br/><br/>
+
+					<label for="acknowledge"> I have read and agree to the <a href="#FAQ" class={rsvp_styles.cocLink}> Code of Conduct</a></label>
+					<br/>					
+					<input
+						type="checkbox"
+						 id="acknowledge"
+						 name="acknowledge"
+						 value={this.state.acknowledge}
+						 onChange={this.onChangeAcknowledge}
+					/>
+					<br/><br/>
 					<label for="message" id="message"> Special requests or messages to the bride and groom? </label>
 					<p>Adult reception to follow. Please make us aware of any food allergy or diatary restrictions. Let us know if there are any other accomadations that can be made to make your attendance possible or more comfertable.</p>
 					<textarea
@@ -177,6 +196,7 @@ export default class RSVP extends Component {
 					<input 
 						type="button"
 						value="Submit"
+						disabled={!this.state.acknowledge}
 						onClick={this.saveGuest}
 					/>
 				</form>

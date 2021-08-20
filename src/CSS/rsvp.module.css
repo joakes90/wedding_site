@@ -5,6 +5,10 @@
 	max-width: 600px;
 }
 
+.cocLink {
+	text-decoration: underline;
+	color: blue;
+}
 form {
 	background-color: #EADEFF;
 	padding: 24px;

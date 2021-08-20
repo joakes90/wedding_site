@@ -7,7 +7,7 @@ export default class FAQ extends Component {
 	render() {
 		return(
 			<div className={rsvp_styles.container}>
-				<h3 className={styles.title}>FAQ</h3>
+				<h3 className={styles.title}>FAQ & Code of conduct</h3>
 				<div class={styles.box}>
 					<h4>When is the deadline to RSVP?</h4>
 					<p>&emsp; We kindly ask that you make you reply with your RSVP no later
@@ -16,7 +16,23 @@ export default class FAQ extends Component {
 					  While you're here why not complete your RSVP on the form below.</p> 
 					
 					<h4>What is the dress code?</h4>
-					<p>&emsp; This will be a formal event. While black tie is not strictly required it is appreciated.</p>
+					<p>
+					&emsp; This will be a formal event. While black tie is not strictly required it is appreciated.
+					<br/>
+					<ul class={styles.outerList}>
+					<b>Gaillardia Dress code.</b>
+						<li> <b> Men </b> </li>
+							<ul>
+								<li>dress shirt</li>
+								<li>dress pants</li>
+								<li>dress pants suit and tie encouraged</li>
+							</ul>
+						<li> <b> Women </b> </li>
+							<ul>
+								<li>long formal dress or pants suit</li>
+							</ul>
+					</ul>
+					</p>
 					
 					<h4>What is the parking situation?</h4>
 					<p>&emsp; Complementary valet parking will be provided.</p>

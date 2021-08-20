@@ -205,6 +205,10 @@ a {
 	
 }
 
+.outerList {
+	list-style-type: none;
+}
+
 /* Party Member Styling */
 
 .bridalGrid {

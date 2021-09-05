@@ -13,7 +13,7 @@ export default class Party extends Component {
 				<PartyMember image="images/bre.png" name="Bri Brown" title="Maid of Honor"/>
 				<PartyMember image="images/josh.png" name="Josh Oakes" title="Best Man"/>
 				<PartyMember image="images/molly.png" name="Molly Hudson" title="Bride's Maid"/>
-				<PartyMember image="images/pat.png" name="Patrick Lamascus" title="Groomsman"/>
+				<PartyMember image="images/john.JPG" name="John Keene" title="Groomsman"/>
 				</div>	
 			</div>
 		);

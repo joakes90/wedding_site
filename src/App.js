@@ -5,6 +5,7 @@ import NavBar from './NavBar.js';
 import Party from './BridalParty.js';
 import HeroBanner from './HeroBanner.js';
 import RSVP from './RSVP.js';
+import RSVPClosed from './RSVPClosed.js';
 import FAQ from './FAQ.js';
 import PhotoGrid from './PhotoGrid.js';
 import Footer from './Footer.js';
@@ -40,7 +41,7 @@ export class Page extends Component {
 					<a id="photos"><PhotoGrid title="Photos"/></a>
 					<a id="party"><Party/></a>
 					<a id="FAQ"><FAQ/></a>
-					{this.state.showRSVP ? <a id="RSVP"><RSVP dismiss={this.removeRSVP}/></a> : null}
+					<a id="RSVP"><RSVPClosed/></a>
 					<a id="Registry"><Registry/></a>
 					<Footer/>
 				</div>

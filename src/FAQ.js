@@ -11,7 +11,7 @@ export default class FAQ extends Component {
 				<div class={styles.box}>
 					<h4>When is the deadline to RSVP?</h4>
 					<p>&emsp; We kindly ask that you make you reply with your RSVP no later
-					 than Friday September 30th. This helps us insure we are able have seating,
+					 than Friday October 1st. This helps us insure we are able have seating,
 					  catering and other accommodations accounted for all of our guests. 
 					  While you're here why not complete your RSVP on the form below.</p> 
 					
